@@ -1,0 +1,43 @@
+🧠 Imagine que ton appli Next.js est une appli de gestion de tâches
+Tu veux :
+
+Créer des utilisateurs ✅
+
+Leur permettre de créer des tâches ✅
+
+Garder ces données même quand on ferme le site ✅
+
+Mais où va-t-on stocker toutes ces infos ? C’est là qu’interviennent PostgreSQL, Docker et Prisma.
+
+🟢 PostgreSQL = un “frigo à données”
+👉 C’est là que tu ranges tes données (tâches, utilisateurs, projets, etc.)
+
+Tu peux imaginer PostgreSQL comme un frigo : tu y mets des aliments (= des données) bien rangés dans des étagères (= des tables comme tasks, users, etc.).
+
+🟦 Docker = une “boîte spéciale” pour faire tourner PostgreSQL
+👉 PostgreSQL est un logiciel, mais tu ne veux pas l’installer toi-même (c’est chiant, long et casse-gueule).
+
+Docker, c’est une boîte magique qui te dit :
+
+"Je te prépare un frigo PostgreSQL prêt à l’emploi."
+
+Tu lances une commande et hop, PostgreSQL tourne, sans que tu installes quoi que ce soit manuellement.
+
+🧩 Prisma = ton assistant de cuisine 👨‍🍳
+Ton appli Next.js ne sait pas parler directement à PostgreSQL (le frigo).
+
+Prisma, c’est l’assistant qui te permet de dire :
+
+"Ajoute une nouvelle tâche dans la base"
+
+"Donne-moi toutes les tâches de l’utilisateur 3"
+
+"Supprime cette tâche"
+
+Et Prisma fait le travail sale à ta place (traduire ton JavaScript en requêtes compliquées en SQL).
+
+🧱 Petit résumé visuel
+Rôle	Exemple simple	À quoi ça sert ?
+🟢 PostgreSQL	Un frigo avec des données	Stocke toutes tes infos (tâches, etc.)
+📦 Docker	Une boîte pour lancer le frigo	Fait tourner PostgreSQL facilement
+🧩 Prisma	Ton assistant qui range dans le frigo	Connecte ton app au frigo (PostgreSQL)
